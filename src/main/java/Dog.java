@@ -1,38 +1,39 @@
 public class Dog {
-    int ID;
+    int id;
     String name;
-    int ownersID;
+    int ownersId;
     double tailsLength;
     String breed;
     int age;
-    Owner owner;
+
+
 
     Dog() {
-        this.ID = 0;
+        this.id = 0;
         this.name = "";
-        this.ownersID = 0;
+        this.ownersId = 0;
         this.tailsLength = 0;
         this.breed = "";
         this.age = 0;
-        this.owner = new Owner();
+
     }
 
-    Dog(int ID, String name, double tailsLength, String breed, int age, Owner owner) {
-        this.ID = ID;
+    Dog(int ID, String name, double tailsLength, String breed, int age) {
+        this.id = ID;
         this.name = name;
-        this.ownersID = owner.getID();
+        this.ownersId = owner.getID();
         this.tailsLength = tailsLength;
         this.breed = breed;
         this.age = age;
-        this.owner = owner;
+
     }
 
     public int getID() {
-        return ID;
+        return id;
     }
 
     public void setID(int ID) {
-        this.ID = ID;
+        this.id = ID;
     }
 
     public String getName() {
@@ -44,11 +45,11 @@ public class Dog {
     }
 
     public int getOwnersID() {
-        return ownersID;
+        return ownersId;
     }
 
     public void setOwnersID(int ownersID) {
-        this.ownersID = ownersID;
+        this.ownersId = ownersID;
     }
 
     public double getTailsLength() {
@@ -75,12 +76,6 @@ public class Dog {
         this.age = age;
     }
 
-    public Owner getOwner() {
-        return owner;
-    }
 
-    public void setOwner(Owner owner) {
-        this.owner = owner;
-    }
 }
 

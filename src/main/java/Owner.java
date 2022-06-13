@@ -1,30 +1,30 @@
 public class Owner {
-    int ID;
+    int id;
     String name;
     String surname;
     String email;
-    int phone;
+    String phone;
 
 
     Owner(int ID) {
-        this.ID = ID;
+        this.id = ID;
         this.name = "";
         this.surname = "";
         this.email = "";
-        this.phone = 0;
+        this.phone = "";
     }
 
     Owner() {
-        this.ID = 0;
+        this.id = 0;
         this.name = "";
         this.surname = "";
         this.email = "";
-        this.phone = 0;
+        this.phone = "0";
 
     }
 
-    Owner(int ID, String name, String surname, String email, int phone) {
-        this.ID = ID;
+    Owner(int ID, String name, String surname, String email, String phone) {
+        this.id = ID;
         this.name = name;
         this.surname = surname;
         this.email = email;
@@ -33,11 +33,11 @@ public class Owner {
     }
 
     public int getID() {
-        return ID;
+        return id;
     }
 
     public void setID(int ID) {
-        this.ID = ID;
+        this.id = ID;
     }
 
     public String getName() {
@@ -65,11 +65,11 @@ public class Owner {
         this.email = email;
     }
 
-    public int getPhone() {
+    public String getPhone() {
         return phone;
     }
 
-    public void setPhone(int phone) {
+    public void setPhone(String phone) {
         this.phone = phone;
     }
 }

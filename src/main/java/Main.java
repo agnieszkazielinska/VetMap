@@ -8,12 +8,12 @@ public class Main {
 
         HashMap<String, String> ownersAnimals= new HashMap<>();
         ownersAnimals.put("Kacpi", "Wilczurek");
-        ownersAnimals.put("Agi","Chmurka");
+        ownersAnimals.put("agi","Chmurka");
         ownersAnimals.put("Nowak", "Burek");
         ownersAnimals.put("Kowalski", "Azor");
         ownersAnimals.put("Migdal", "Kora");
 
-        System.out.println(ownersAnimals.get("Agi"));
+//        System.out.println(ownersAnimals.get("agi"));
 
         ArrayList <String> wilczureksAnimals = new ArrayList<>();
         wilczureksAnimals.add("Chmurka");
@@ -29,31 +29,40 @@ public class Main {
         ownersAnimals2.put("Wilczurek", wilczureksAnimals);
         ownersAnimals2.put("Ktostam", ktostamAnimals);
 
-        System.out.println(ownersAnimals2.get("Wilczurek"));
+//        System.out.println(ownersAnimals2.get("Wilczurek"));
 
 
         HashMap<Owner, Dog> ownersDog = new HashMap<>();
 
-        Owner Kacpi = new Owner(1, "Kacpi", "Wilczurek", "kacpiwilczurek@buziaczek.pl", 782483985);
-        Owner Agi = new Owner(2, "Agi", "Wilczurek", "agiwilczurek@buziaczek.pl", 724153130);
+        Owner kacpi = new Owner(1, "Kacpi", "Wilczurek", "kacpiwilczurek@buziaczek.pl", "+48782483985");
+        Owner agi = new Owner(2, "Agi", "Wilczurek", "agiwilczurek@buziaczek.pl", "+48724153130");
+        Owner robert = new Owner(3, "Robert", "Migdal", "wujekrobert@buziaczek.pl", "+48724153130");
+        Owner darek = new Owner(4, "Darek", "Daro", "darodario@buziaczek.pl", "+48724153130");
+        Owner monika = new Owner(5, "Monika", "Brozek", "monikabrozek@buziaczek.pl", "+48724153130");
 
-        Dog Chmura = new Dog(9, "Chmurka", 31.5, "Samoyed",1, Agi);
-        Dog Barnabasz = new Dog(8, "Barnabasz", 27.9, "Wilczur", 2, Kacpi);
-        Dog Adas = new Dog(7, "Adas", 13.6, "Szibka", 3, Agi);
+        Dog chmura = new Dog(9, "Chmurka", 31.5, "Samoyed",1);
+        Dog barnabasz = new Dog(8, "Barnabasz", 27.9, "Wilczur", 2);
+        Dog adas = new Dog(7, "Adas", 13.6, "Szibka", 3);
+        Dog kora = new Dog(6, "Kora", 13.1, "Wilczur", 8);
+        Dog dario = new Dog(5, "Dario", 12.9, "Kundelek", 4);
+        Dog boskiOski = new Dog(4, "Oski", 34, "Blablador", 6);
 
-        ownersDog.put(Kacpi,Barnabasz );
-        ownersDog.put(Agi, Chmura);
+        ownersDog.put(kacpi,barnabasz );
+        ownersDog.put(agi, chmura);
+        ownersDog.put(robert, kora);
+        ownersDog.put(darek,dario);
+        ownersDog.put(monika,boskiOski);
 
-        var result = ownersDog.get(Kacpi);
+        var result = ownersDog.get(kacpi);
         System.out.println(result.getName());
 
 
         ArrayList<Dog> dogs = new ArrayList<>();
-        dogs.add(Chmura);
-        dogs.add(Adas);
+        dogs.add(chmura);
+        dogs.add(adas);
 
         HashMap<Owner, ArrayList> ownersDogs = new HashMap<>();
-        ownersDogs.put(Agi, dogs);
+        ownersDogs.put(agi, dogs);
 
 
     }
